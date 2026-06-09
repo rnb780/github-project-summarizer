@@ -18,7 +18,7 @@ def main():
         if question == '0':
             break
 
-        if not question.endswith('.txt') and not question.endswith('.json'):
+        if not question.endswith('.txt') and not question.endswith('.json'): # Ajout de l'extention si non presente
             question += '.txt'
 
         # Lecture du contenu du fichier choisi si present dans le dossier
