@@ -8,11 +8,11 @@ Ce projet contient un assistant intelligent qui lit un fichier `.txt` ou `.json`
 
 ## Demonstration CLI
 
-![Project demo avec chinese_test.txt](gif_demos\Animation_resume.gif)
+![Project demo avec chinese_test.txt](gif_demos/Animation_resume.gif)
 
 ## Demonstration Web 
 
-![](gif_demos\Animation_resume_web.gif)
+![](gif_demos/Animation_resume_web.gif)
 
 ### 🌍 Support Multilingue
 
