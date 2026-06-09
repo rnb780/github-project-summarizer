@@ -1,0 +1,44 @@
+es.react.dev
+Este repositorio contiene el código fuente y la documentación de es.react.dev.
+
+Comenzar
+Prerrequisitos
+Git.
+Node: cualquier versión a partir de la v16.8.0 o superior.
+Yarn: consulta el sitio web de Yarn para obtener instrucciones de instalación (en inglés).
+Una bifurcación (fork) del repositorio (para cualquier contribución).
+Un clon (clone) del repositorio es.react.dev en tu máquina local.
+Instalación
+cd es.react.dev para entrar en la raíz del proyecto.
+yarn para instalar las dependencias npm del sitio web.
+Ejecución local
+yarn dev para iniciar el servidor de desarrollo (desarrollado por Next.js).
+open http://localhost:3000 para abrir el sitio en tu navegador favorito.
+Contribución
+Directrices
+La documentación está dividida en varias secciones con un tono y un propósito diferentes. Si tienes previsto escribir más de unas pocas frases, quizá te resulte útil familiarizarte con las directrices de contribución de las secciones correspondientes.
+
+Crear una rama (branch)
+git checkout main desde cualquier carpeta de tu repositorio local es.react.dev.
+git pull origin main para asegurarte de que tienes el último código principal (main).
+git checkout -b el-nombre-de-mi-rama (sustituyendo el-nombre-de-mi-rama por un nombre adecuado) para crear una rama (branch).
+Hacer un cambio
+Sigue las instrucciones de "Ejecución local".
+Guarda los archivos y compruébalos en el navegador.
+Los cambios en los componentes React en src se recargarán en caliente.
+Los cambios en los archivos markdown de content se cargarán en caliente.
+Si trabajas con plugins, puede que tengas que eliminar el directorio .cache y reiniciar el servidor.
+Prueba el cambio
+Si es posible, prueba cualquier cambio visual en todas las versiones más recientes de los navegadores habituales, tanto en el escritorio como en el móvil.
+Ejecuta yarn check-all. (Esto ejecutará Prettier, ESLint y validará los tipos).
+Empújalo (Push it)
+git add -A && git commit -m "Mi mensaje" (sustituye Mi mensaje por un mensaje de confirmación, como Arreglar logotipo de cabecera en Android) para escenificar y confirmar tus cambios.
+git push my-fork-name el-nombre-de-mi-rama.
+Ve al repositorio es.react.dev y deberías ver las ramas empujadas recientemente.
+Sigue las instrucciones de GitHub.
+Si es posible, incluye capturas de pantalla de los cambios visuales. Se activará una compilación de vista previa después de que tus cambios se envíen a GitHub.
+Traducción
+Si estás interesado en traducir es.react.dev, consulta los esfuerzos de traducción actuales aquí (en inglés).
+
+Licencia
+El contenido enviado a es.react.dev tiene licencia CC-BY-4.0, tal y como se encuentra en el archivo LICENSE-DOCS.md.
