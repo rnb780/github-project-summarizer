@@ -1,53 +1,41 @@
-Project #10 - Argent Bank API
-This codebase contains the code needed to run the backend for Argent Bank.
+Resume Texte
+Outil Python simple pour résumer un depot GitHub texte avec une IA via ollama.
 
-Getting Started
-Prerequisites
-Argent Bank uses the following tech stack:
+Description
+Ce projet contient un petit assistant qui lit un fichier .txt ou .json et envoie le contenu à un modèle IA pour générer un résumé. Le but est d’obtenir un résumé compact, fidèle et adapté aux descriptions de projet technique.
 
-Node.js v12
-MongoDB Community Server
-Please make sure you have the right versions and download both packages. You can verify this by using the following commands in your terminal:
+Structure
+main.py : interface en ligne de commande qui liste les fichiers disponibles et demande à l’utilisateur de choisir un fichier à résumer.
+ouverture_lecteur_fichier.py : fonction de lecture de fichier avec gestion d’erreur.
+chatbot_file.py : construction du prompt système et appel à ollama.chat pour générer le résumé.
+requirements.txt : dépendance Python nécessaire.
+test.txt: Fichier .txt à disposition pour test.
+Installation
+Assurez-vous d’avoir Python installé (idéalement 3.12+).
+Installez la dépendance :
+pip install -r requirements.txt
+Configurez l’accès à ollama si besoin (authentification / API locale selon votre installation).
+Utilisation
+Placez votre fichier texte dans le dossier du projet.
+Lancez le script principal :
+python main.py
+Entrez le nom du fichier lorsque le programme le demande.
+Le résumé généré s’affichera dans la console.
+Si le fichier n’inclut pas .txt ou .json, le programme ajoute automatiquement l’extension .txt.
 
-# Check Node.js version
-node --version
+Désinstallation
+Pour supprimer l’outil localement, supprimez simplement le dossier du projet ou les fichiers suivants :
 
-# Check Mongo version
-mongo --version
-Instructions
-Fork this repo
-Clone the repo onto your computer
-Open a terminal window in the cloned project
-Run the following commands:
-# Install dependencies
-npm install
+main.py
+chatbot_file.py
+ouverture_lecteur_fichier.py
+requirements.txt
+README.md
+tout fichier .txt ou .json que vous avez ajouté pour test
+Pour désinstaller la dépendance Python :
 
-# Start local dev server
-npm run dev:server
-
-# Populate database with two users
-npm run populate-db
-Your server should now be running at http://locahost:3001 and you will now have two users in your MongoDB database!
-
-Populated Database Data
-Once you run the populate-db script, you should have two users in your database:
-
-Tony Stark
-First Name: Tony
-Last Name: Stark
-Email: tony@stark.com
-Password: password123
-Steve Rogers
-First Name: Steve,
-Last Name: Rogers,
-Email: steve@rogers.com,
-Password: password456
-API Documentation
-To learn more about how the API works, once you have started your local environment, you can visit: http://localhost:3001/api-docs
-
-Design Assets
-Static HTML and CSS has been created for most of the site and is located in: /designs.
-
-For some of the dynamic features, like toggling user editing, there is a mock-up for it in /designs/wireframes/edit-user-name.png.
-
-And for the API model that you will be proposing for transactitons, the wireframe can be found in /designs/wireframes/transactions.png
+pip uninstall ollama
+Notes
+Le projet suppose que ollama est correctement configuré sur votre machine.
+Si vous utilisez une autre version de Python, adaptez la commande python en conséquence (python3, py, etc.).
+Le model ollama utilisé pour le test durant le developpement est llama3, pour changer de model : chatbot_file\model=VOTREMODEL
