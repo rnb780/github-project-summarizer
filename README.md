@@ -61,8 +61,7 @@ Vous pouvez tester avec les fichiers multilingues fournis :
 ```bash
 python main.py
 # Entrez : chinese_test (résumé en français depuis le chinois)
-# Ou : arabic_test (résumé en français depuis l'arabe)
-# Ou : french_test (résumé en français depuis le français)
+# Ou : arabic_test (résumé en français depuis l'arabe) etc...
 # Le résumé s'affichera automatiquement en français
 ```
 
