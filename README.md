@@ -88,7 +88,7 @@ python run.py
 ```
 
 2. Ce script démarre en parallèle :
-   - le backend FastAPI (`app.Py`) via `uvicorn`
+   - le backend FastAPI (`app.py`) via `uvicorn`
    - le frontend Streamlit (`interface.py`)
 
 3. Ouvrez l’URL affichée par Streamlit dans votre navigateur pour accéder à l’interface.
