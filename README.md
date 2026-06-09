@@ -6,9 +6,13 @@ Outil Python simple pour résumer et traduire des dépôts GitHub en français v
 
 Ce projet contient un assistant intelligent qui lit un fichier `.txt` ou `.json`, peu importe sa langue d'origine, et génère un résumé **fidèle, complet et en français**. Le but est d'obtenir des résumés précis et adaptés aux descriptions de projet technique, en traduisant automatiquement depuis n'importe quelle langue.
 
-## Demonstration
+## Demonstration CLI
 
-![Project demo avec chinese_test.txt](Animation_resume.gif)
+![Project demo avec chinese_test.txt](GIf_demos/Animation_resume.gif)
+
+## Demonstration Web 
+
+![](Gif_demos/Animation_resume_web.gif)
 
 ### 🌍 Support Multilingue
 
