@@ -78,6 +78,8 @@ python main.py
 4. Le résumé généré **en français** s'affichera dans la console.
 
 > Si le fichier n'inclut pas `.txt` ou `.json`, le programme ajoute automatiquement l'extension `.txt`.
+>
+> Si votre fichier de test est dans un sous-dossier, indiquez le chemin relatif complet comme dans l’interface CLI. Exemple : `test_files/spanish_test.txt`.
 
 ### Mode tout-en-un avec `run.py`
 

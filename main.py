@@ -1,11 +1,11 @@
 from ouverture_lecteur_fichier import lecture
 from chatbot_file import chatbot_fun
 import os
+from pathlib import Path
 
 # Liste des fichiers disponibles dans le dossier courant
 # Seules les extensions .txt et .json sont prises en compte
-tout_element = os.listdir(".")
-fichiers_txt = [f for f in tout_element if f.endswith(".txt") or f.endswith(".json")]
+fichiers_txt = [str(f).replace("\\", "/") for f in Path("test_files").rglob("*.txt")] + [str(f).replace("\\", "/") for f in Path("test_files").rglob("*.json")]
 
 
 def main():
