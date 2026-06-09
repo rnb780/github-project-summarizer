@@ -19,7 +19,10 @@ L'outil supporte **toutes les langues** : anglais, chinois, allemand, espagnol, 
 - `main.py` : interface en ligne de commande qui liste les fichiers disponibles et demande à l’utilisateur de choisir un fichier à résumer.
 - `ouverture_lecteur_fichier.py` : fonction de lecture de fichier avec gestion d’erreur.
 - `chatbot_file.py` : construction du prompt système et appel à `ollama.chat` pour générer le résumé.
-- `requirements.txt` : dépendance Python nécessaire.
+- `app.Py` : serveur FastAPI qui accepte un upload de fichier et renvoie le résumé de l’IA.
+- `interface.py` : interface Streamlit minimale pour afficher un titre et supporter une UI simple.
+- `run.py` : script de démarrage tout-en-un qui lance simultanément le backend FastAPI et le frontend Streamlit.
+- `requirements.txt` : liste des dépendances Python du projet.
 
 ## Fichiers de Test
 
@@ -32,7 +35,7 @@ Des fichiers de test multilingues sont fournis pour démontrer les capacités de
 ## Installation
 
 1. Assurez-vous d’avoir Python installé (idéalement 3.12+).
-2. Installez la dépendance :
+2. Installez les dépendances du projet :
 
 ```bash
 pip install -r requirements.txt
@@ -40,7 +43,16 @@ pip install -r requirements.txt
 
 3. Configurez l’accès à `ollama` si besoin (authentification / API locale selon votre installation).
 
+4. Vérifiez que `uvicorn` et `streamlit` sont installés :
+
+```bash
+uvicorn --version
+streamlit --version
+```
+
 ## Utilisation
+
+### Mode ligne de commande
 
 1. Placez votre fichier texte dans le dossier du projet.
 2. Lancez le script principal :
@@ -53,6 +65,20 @@ python main.py
 4. Le résumé généré **en français** s'affichera dans la console.
 
 > Si le fichier n'inclut pas `.txt` ou `.json`, le programme ajoute automatiquement l'extension `.txt`.
+
+### Mode tout-en-un avec `run.py`
+
+1. Lancez le script de démarrage tout-en-un :
+
+```bash
+python run.py
+```
+
+2. Ce script démarre en parallèle :
+   - le backend FastAPI (`app.Py`) via `uvicorn`
+   - le frontend Streamlit (`interface.py`)
+
+3. Ouvrez l’URL affichée par Streamlit dans votre navigateur pour accéder à l’interface.
 
 ### Exemple avec Traduction
 

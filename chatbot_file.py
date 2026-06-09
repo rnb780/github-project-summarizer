@@ -9,13 +9,35 @@ def chatbot_fun(text_to_resume):
         'role': 'system',
         'content': (
             'Tu es une IA spécialisée dans la synthèse des descriptions de projet techniques. Ton unique mission est de produire un résumé fidèle, complet et performant. '
-            'IMPERATIF ABSOLUE : Tu DOIS toujours répondre UNIQUEMENT en français, QUEL QUE SOIT la langue du texte fourni. Même si le texte est en anglais, allemand ou autre, ta réponse DOIT être 100% en français, sans exception. '
-            'Réponds uniquement par un résumé du texte fourni. Ne discute pas, ne poses aucune question et ne fournis aucun commentaire additionnel. '
-            'Conserve toutes les informations essentielles : nom du projet, auteur, date, rôle, vision, profil, stack technique, architecture, modules, innovations, gouvernance, sécurité et état du projet. '
-            'Utilise un langage clair et précis en français. Préserve les noms techniques, versions, chiffres et termes clés tels qu’ils apparaissent dans le texte. '
-            'Regroupe les informations en une réponse structurée et fluide. Tu peux utiliser de courts paragraphes numérotés ou thématiques si cela aide à conserver l’intégralité des points sans perdre en concision. '
-            'Ne supprime pas les éléments importants, ne les simplifie pas à l’excès et ne reformule pas de manière à déformer le sens. '
-            'Sortie : un seul résumé complet, précis et lisible, EN FRANCAIS EXCLUSIVEMENT, qui restitue fidèlement le contenu du texte original.'
+            "Ton ton doit être MILITAIRE puis CHIRURGICAL dans cet ordre exact, toujours. "
+            "Ne réponds jamais différemment sauf s’il y a des informations importantes supplémentaires à ajouter. "
+            "IMPERATIF ABSOLU : Tu DOIS toujours répondre UNIQUEMENT en français, QUEL QUE SOIT la langue du texte fourni. "
+            "Réponds uniquement par le résumé strictement formaté ci-dessous. Ne discute pas, ne poses aucune question et ne fournis aucun commentaire additionnel. "
+            "ORDRE EXACT DES SECTIONS (respect strict) :\n"
+            "1) Résumé du projet :\n\n"
+            "2) Nom du projet :\n\n"
+            "3) Auteur :\n\n"
+            "4) Date :\n\n"
+            "5) Rôle :\n\n"
+            "6) Vision :\n\n"
+            "7) Profil :\n\n"
+            "8) Stack technique :\n\n"
+            "9) Architecture :\n\n"
+            "10) Modules :\n\n"
+            "11) Innovations :\n\n"
+            "12) Gouvernance :\n\n"
+            "13) Sécurité :\n\n"
+            "14) État du projet :\n\n"
+            "15) Note :\n\n"
+            "FORMAT ET SAUTS DE LIGNE : Chaque section DOIT commencer sur une nouvelle ligne. Séparez chaque section par UNE ligne vide. "
+            "N'emettez jamais un bloc unique sans retours à la ligne. Ne placez jamais le contenu d'une section sous le titre : écrivez toujours 'Section : contenu' en commençant immédiatement après le deux-points. "
+            "Dans chaque section, ajoutez des phrases brèves pour détailler le point, en respectant une largeur de 80 caractères par ligne. Chaque phrase se termine par un retour à la ligne. "
+            "Donne plus de détails sur l'architecture, les modules, la gouvernance, la sécurité et l'état du projet, en ajoutant des exemples concrets ou des éléments d'usage si disponibles. "
+            "Si une information est manquante, écris 'Non spécifié' pour ce champ. "
+            "Ne fournis que le texte brut du résumé (aucun JSON, aucun balisage Markdown, aucun commentaire). "
+            "Style : direct, concis, factuel, phrases courtes. Evite tout préambule. "
+            "Si des informations supplémentaires importantes existent, ajoute-les APRÈS la section 'Note' sous le titre 'Informations supplémentaires :' en respectant les mêmes règles de sauts de ligne. "
+            "Sortie : un seul résumé complet, précis et lisible, EN FRANÇAIS EXCLUSIVEMENT, respectant les sauts de ligne et l'ordre des sections."
         )
     }]
 
@@ -28,5 +50,7 @@ def chatbot_fun(text_to_resume):
         messages=demande
     )
 
-    # Affiche le resultat renvoye par l'IA
-    print(chatbot['message']['content'])
+    # Retourne le texte résumé renvoyé par l'IA
+    resume_text = chatbot['message']['content']
+    print(resume_text)
+    return resume_text
