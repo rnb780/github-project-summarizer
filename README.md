@@ -1,10 +1,14 @@
 # Resume Texte
 
-Outil Python simple pour résumer un depot GitHub texte avec une IA via `ollama`.
+Outil Python simple pour résumer et traduire des dépôts GitHub en français via une IA `ollama`.
 
 ## Description
 
-Ce projet contient un petit assistant qui lit un fichier `.txt` ou `.json` et envoie le contenu à un modèle IA pour générer un résumé. Le but est d’obtenir un résumé compact, fidèle et adapté aux descriptions de projet technique.
+Ce projet contient un assistant intelligent qui lit un fichier `.txt` ou `.json`, peu importe sa langue d'origine, et génère un résumé **fidèle, complet et en français**. Le but est d'obtenir des résumés précis et adaptés aux descriptions de projet technique, en traduisant automatiquement depuis n'importe quelle langue.
+
+### 🌍 Support Multilingue
+
+L'outil supporte **toutes les langues** : anglais, chinois, allemand, espagnol, et bien d'autres. Que votre fichier soit en anglais, mandarin, ou toute autre langue, il sera résumé et traduit en français avec fidélité.
 
 ## Structure
 
@@ -12,7 +16,13 @@ Ce projet contient un petit assistant qui lit un fichier `.txt` ou `.json` et en
 - `ouverture_lecteur_fichier.py` : fonction de lecture de fichier avec gestion d’erreur.
 - `chatbot_file.py` : construction du prompt système et appel à `ollama.chat` pour générer le résumé.
 - `requirements.txt` : dépendance Python nécessaire.
-- `test.txt`: Fichier .txt à disposition pour test.
+
+## Fichiers de Test
+
+Des fichiers de test sont fournis pour démontrer les capacités multilingues de l'outil :
+
+- `test.txt` : Fichier test en français.
+- `chinese_test.txt` : Fichier test en chinois mandarin pour tester la traduction et le résumé depuis le chinois.
 
 ## Installation
 
@@ -35,9 +45,25 @@ python main.py
 ```
 
 3. Entrez le nom du fichier lorsque le programme le demande.
-4. Le résumé généré s’affichera dans la console.
+4. Le résumé généré **en français** s'affichera dans la console.
 
-> Si le fichier n’inclut pas `.txt` ou `.json`, le programme ajoute automatiquement l’extension `.txt`.
+> Si le fichier n'inclut pas `.txt` ou `.json`, le programme ajoute automatiquement l'extension `.txt`.
+
+### Exemple avec Traduction
+
+Vous pouvez tester avec le fichier en chinois fourni :
+
+```bash
+python main.py
+# Entrez : chinese_test
+# Le résumé s'affichera automatiquement en français
+```
+
+## Cas d'Usage Principaux
+
+- **Résumer des dépôts GitHub** : Clonez un dépôt, récupérez son README ou sa documentation, et obtenez un résumé fidèle en français.
+- **Traduire et résumer** : Convertissez et résumez des documents en anglais, mandarin, allemand, etc. vers le français en une seule opération.
+- **Traiter des documents multilingues** : L'outil maintient l'intégrité du contenu tout en forçant la sortie en français.
 
 ## Désinstallation
 
@@ -60,4 +86,7 @@ pip uninstall ollama
 
 - Le projet suppose que `ollama` est correctement configuré sur votre machine.
 - Si vous utilisez une autre version de Python, adaptez la commande `python` en conséquence (`python3`, `py`, etc.).
-- Le model `ollama` utilisé pour le test durant le developpement est `llama3`, pour changer de model : `chatbot_file\model=VOTREMODEL`
+- Le modèle `ollama` utilisé pour le test durant le développement est `llama3`. Pour changer de modèle : `chatbot_file.py` → `model="VOTREMODEL"`
+- **L'outil FORCE la sortie en français** : Peu importe la langue du fichier source, la réponse sera toujours en français.
+- Les fichiers `test.txt` et `chinese_test.txt` sont fournis pour valider la traduction multilingue.
+- --- Outil en phase de developpement ---
