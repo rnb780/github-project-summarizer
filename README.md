@@ -19,10 +19,11 @@ L'outil supporte **toutes les langues** : anglais, chinois, allemand, espagnol, 
 
 ## Fichiers de Test
 
-Des fichiers de test sont fournis pour démontrer les capacités multilingues de l'outil :
+Des fichiers de test multilingues sont fournis pour démontrer les capacités de traduction et résumé de l'outil :
 
-- `test.txt` : Fichier test en français.
+- `french_test.txt` : Fichier test en français.
 - `chinese_test.txt` : Fichier test en chinois mandarin pour tester la traduction et le résumé depuis le chinois.
+- `arabic_test.txt` : Fichier test en arabe pour tester la traduction et le résumé depuis l'arabe.
 
 ## Installation
 
@@ -51,11 +52,13 @@ python main.py
 
 ### Exemple avec Traduction
 
-Vous pouvez tester avec le fichier en chinois fourni :
+Vous pouvez tester avec les fichiers multilingues fournis :
 
 ```bash
 python main.py
-# Entrez : chinese_test
+# Entrez : chinese_test (résumé en français depuis le chinois)
+# Ou : arabic_test (résumé en français depuis l'arabe)
+# Ou : french_test (résumé en français depuis le français)
 # Le résumé s'affichera automatiquement en français
 ```
 
@@ -88,5 +91,5 @@ pip uninstall ollama
 - Si vous utilisez une autre version de Python, adaptez la commande `python` en conséquence (`python3`, `py`, etc.).
 - Le modèle `ollama` utilisé pour le test durant le développement est `llama3`. Pour changer de modèle : `chatbot_file.py` → `model="VOTREMODEL"`
 - **L'outil FORCE la sortie en français** : Peu importe la langue du fichier source, la réponse sera toujours en français.
-- Les fichiers `test.txt` et `chinese_test.txt` sont fournis pour valider la traduction multilingue.
+- Les fichiers de test `french_test.txt`, `chinese_test.txt` et `arabic_test.txt` sont fournis pour valider la traduction multilingue.
 - --- Outil en phase de **développement** ---
