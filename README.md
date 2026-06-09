@@ -23,18 +23,27 @@ L'outil supporte **toutes les langues** : anglais, chinois, allemand, espagnol, 
 - `main.py` : interface en ligne de commande qui liste les fichiers disponibles et demande à l’utilisateur de choisir un fichier à résumer.
 - `ouverture_lecteur_fichier.py` : fonction de lecture de fichier avec gestion d’erreur.
 - `chatbot_file.py` : construction du prompt système et appel à `ollama.chat` pour générer le résumé.
-- `app.Py` : serveur FastAPI qui accepte un upload de fichier et renvoie le résumé de l’IA.
+- `app.py` : serveur FastAPI qui accepte un upload de fichier et renvoie le résumé de l’IA.
 - `interface.py` : interface Streamlit minimale pour afficher un titre et supporter une UI simple.
 - `run.py` : script de démarrage tout-en-un qui lance simultanément le backend FastAPI et le frontend Streamlit.
 - `requirements.txt` : liste des dépendances Python du projet.
+
+## Architecture
+
+Le projet combine :
+
+- un backend API en `FastAPI` (`app.py`) pour gérer les uploads et les résumés,
+- une interface utilisateur légère en `Streamlit` (`interface.py`) pour afficher le résultat.
+- un runner tout-en-un (`run.py`) qui démarre à la fois FastAPI et Streamlit.
 
 ## Fichiers de Test
 
 Des fichiers de test multilingues sont fournis pour démontrer les capacités de traduction et résumé de l'outil :
 
-- `french_test.txt` : Fichier test en français.
-- `chinese_test.txt` : Fichier test en chinois mandarin pour tester la traduction et le résumé depuis le chinois.
-- `arabic_test.txt` : Fichier test en arabe pour tester la traduction et le résumé depuis l'arabe.
+- `french_test.txt` : fichier test en français.
+- `chinese_test.txt` : fichier test en chinois mandarin.
+- `arabic_test.txt` : fichier test en arabe.
+- `spanish_test.txt` : fichier test en espagnol.
 
 ## Installation
 
