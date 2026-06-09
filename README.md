@@ -89,4 +89,4 @@ pip uninstall ollama
 - Le modèle `ollama` utilisé pour le test durant le développement est `llama3`. Pour changer de modèle : `chatbot_file.py` → `model="VOTREMODEL"`
 - **L'outil FORCE la sortie en français** : Peu importe la langue du fichier source, la réponse sera toujours en français.
 - Les fichiers `test.txt` et `chinese_test.txt` sont fournis pour valider la traduction multilingue.
-- --- Outil en phase de developpement ---
+- --- Outil en phase de **développement** ---
