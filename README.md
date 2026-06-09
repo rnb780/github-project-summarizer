@@ -12,6 +12,7 @@ Ce projet contient un petit assistant qui lit un fichier `.txt` ou `.json` et en
 - `ouverture_lecteur_fichier.py` : fonction de lecture de fichier avec gestion d’erreur.
 - `chatbot_file.py` : construction du prompt système et appel à `ollama.chat` pour générer le résumé.
 - `requirements.txt` : dépendance Python nécessaire.
+- `test.txt`: Fichier .txt à disposition pour test.
 
 ## Installation
 
